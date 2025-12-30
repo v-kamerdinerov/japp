@@ -145,7 +145,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runner: [macos-12, macos-14]
+        runner: [macos-15]
         build_type: [Debug, Release]
         include:
           - runner: macos-12
@@ -191,7 +191,7 @@ jobs:
           submodules: recursive
 
       - name: Download Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
 
       - name: Create binary archives
         run: |
@@ -250,7 +250,7 @@ jobs:
           submodules: recursive
 
       - name: Download Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
 
       - name: Create archive
         run: |
